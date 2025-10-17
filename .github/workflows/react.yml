@@ -47,7 +47,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: ${{ secrets.FTP_PORT }}
           protocol: ftp
-          local-dir: ./
+          local-dir: build
           server-dir: ./
           dangerous-clean-slate: false
           exclude: |
@@ -56,3 +56,6 @@ jobs:
             **/node_modules/**
             **/src/**
             **/public/**
+            **/README.md
+            package.json
+            package-lock.json
